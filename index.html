@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>दासगावकरांचा राजा | Ganpati Invitation</title>
+
+  <!-- Marathi + English Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Noto Serif Devanagari", serif;
+      background:
+        radial-gradient(circle at top, #3d0900 0%, #160300 40%, #050000 100%);
+      color: #ffd98a;
+      overflow-x: hidden;
+    }
+
+    /* Floating particles */
+    .particle {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      background: #ffcb57;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: float 8s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    .p1 { left: 10%; top: 80%; animation-delay: 0s; }
+    .p2 { left: 25%; top: 60%; animation-delay: 2s; }
+    .p3 { left: 70%; top: 75%; animation-delay: 1s; }
+    .p4 { left: 85%; top: 50%; animation-delay: 3s; }
+    .p5 { left: 50%; top: 90%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%,100% {
+        transform: translateY(0);
+        opacity: 0.2;
+      }
+
+      50% {
+        transform: translateY(-80px);
+        opacity: 0.8;
+      }
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 35px 18px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(55, 9, 0, 0.94),
+          rgba(12, 1, 0, 0.97)
+        );
+
+      border: 1px solid rgba(255, 190, 70, 0.55);
+      border-radius: 28px;
+      padding: 28px 20px 32px;
+      text-align: center;
+
+      box-shadow:
+        0 0 30px rgba(255, 150, 25, 0.17),
+        inset 0 0 35px rgba(255, 160, 40, 0.06);
+
+      animation: cardIn 1.1s ease-out;
+    }
+
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .om {
+      font-size: 27px;
+      color: #ffd166;
+      margin-bottom: 7px;
+    }
+
+    .top-line {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #f5c96a;
+      margin-bottom: 15px;
+    }
+
+    .logo-wrap {
+      width: 225px;
+      height: 225px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      border: 3px solid #dca63a;
+      box-shadow:
+        0 0 18px rgba(255, 192, 70, 0.4),
+        0 0 60px rgba(255, 150, 20, 0.12);
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(32px, 8vw, 48px);
+      line-height: 1.25;
+      font-weight: 800;
+      color: #f7c75e;
+
+      text-shadow:
+        0 2px 12px rgba(255, 166, 0, 0.35);
+
+      margin-bottom: 12px;
+    }
+
+    .english-title {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f0d49b;
+      margin-bottom: 20px;
+    }
+
+    .welcome {
+      font-size: 21px;
+      line-height: 1.75;
+      color: #fff0c8;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .divider {
+      width: 100px;
+      height: 2px;
+      background: #dca63a;
+      margin: 0 auto 25px;
+      box-shadow: 0 0 10px rgba(255, 193, 66, 0.4);
+    }
+
+    .info-box {
+      background: rgba(255, 212, 120, 0.07);
+      border: 1px solid rgba(255, 196, 80, 0.22);
+      border-radius: 20px;
+      padding: 20px 16px;
+      margin-top: 10px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      text-align: left;
+      padding: 12px 5px;
+      border-bottom: 1px solid rgba(255, 218, 140, 0.1);
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .icon {
+      width: 30px;
+      flex-shrink: 0;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .info-content {
+      color: #ffe6ac;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .label {
+      display: block;
+      color: #d9a940;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+
+    .maps-btn {
+      display: block;
+      margin: 22px auto 0;
+      width: 90%;
+      max-width: 320px;
+
+      padding: 13px 20px;
+      border-radius: 50px;
+
+      background: linear-gradient(90deg, #d97706, #efb52f);
+      color: #260600;
+      text-decoration: none;
+
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+
+      box-shadow: 0 7px 22px rgba(238, 164, 42, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .maps-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(238, 164, 42, 0.3);
+    }
+
+    .contact-title {
+      margin-top: 29px;
+      margin-bottom: 12px;
+
+      color: #f2c45d;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: rgba(255,255,255,0.035);
+      border-radius: 16px;
+      padding: 13px;
+      margin: 8px 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.55;
+      color: #ffe8b4;
+    }
+
+    .contact a {
+      color: #ffd36b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #f3d99c;
+    }
+
+    .bappa {
+      margin-top: 12px;
+      font-size: 22px;
+      color: #ffd166;
+      font-weight: bold;
+    }
+
+    .year {
+      margin-top: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #9e7841;
+    }
+
+    @media (max-width: 430px) {
+      .card {
+        padding: 23px 14px 27px;
+      }
+
+      .logo-wrap {
+        width: 195px;
+        height: 195px;
+      }
+
+      .welcome {
+        font-size: 19px;
+      }
+
+      .info-content {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Decorative particles -->
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+
+  <main class="page">
+
+    <section class="card">
+
+      <div class="om">ॐ</div>
+
+      <div class="top-line">
+        || गणपती बाप्पा मोरया ||
+      </div>
+
+      <div class="logo-wrap">
+        <img
+          src="ganpati-logo.jpeg"
+          alt="Ganpati Logo"
+          class="logo"
+        >
+      </div>
+
+      <h1>दासगावकरांचा राजा</h1>
+
+      <div class="english-title">
+        Dasgaonkar Cha Raja
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="welcome">
+        आपले सहकुटुंब मनःपूर्वक स्वागत आहे
+      </div>
+
+      <div class="info-box">
+
+        <!-- DATE -->
+        <div class="info-row">
+          <div class="icon">📅</div>
+
+          <div class="info-content">
+            <span class="label">Date</span>
+            14 September 2026
+          </div>
+        </div>
+
+        <!-- TIME -->
+        <div class="info-row">
+          <div class="icon">⏰</div>
+
+          <div class="info-content">
+            <span class="label">Time</span>
+            7:00 PM
+          </div>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="info-row">
+          <div class="icon">📍</div>
+
+          <div class="info-content">
+            <span class="label">Venue</span>
+
+            703, Rameshwar Society LTD,<br>
+            Opp. Sai Baba Mandir,<br>
+            Amboli, Andheri West
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GOOGLE MAPS -->
+      <a
+        class="maps-btn"
+        href="https://www.google.com/maps/search/?api=1&query=703%20Rameshwar%20Society%20LTD%20Opp%20Sai%20Baba%20Mandir%20Amboli%20Andheri%20West"
+        target="_blank"
+      >
+        📍 Open Location in Google Maps
+      </a>
+
+      
+
+      <div class="footer">
+        श्री गणरायाच्या शुभ आशीर्वादाने
+        आपल्या उपस्थितीने उत्सवाची शोभा वाढवावी.
+      </div>
+
+      <div class="bappa">
+        🙏 गणपती बाप्पा मोरया 🙏
+      </div>
+
+      <div class="year">
+        2026 • GANPATI FESTIVAL INVITATION
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
